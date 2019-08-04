@@ -1,0 +1,28 @@
+version: 0.0
+os: linux
+
+files:             
+  - source: ./webapp/cloud/target/ROOT-1.war
+    destination: /var/lib/tomcat8/webapps
+  - source: ./applicationStart.sh
+    destination: /home/ubuntu
+  - source: ./afterInstall.sh
+    destination: /home/ubuntu
+  - source: ./validateService.sh
+    destination: /home/ubuntu
+  - source: ./appspec.yml
+    destination: /home/ubuntu
+
+hooks:
+  AfterInstall:
+   - location: ./afterInstall.sh
+     timeout: 180
+     runas: ubuntu
+  ApplicationStart:
+   - location: ./applicationStart.sh
+     timeout: 180
+     runas: ubuntu
+  ValidateService:
+   - location: ./validateService.sh
+     timeout: 180
+     runas: ubuntu

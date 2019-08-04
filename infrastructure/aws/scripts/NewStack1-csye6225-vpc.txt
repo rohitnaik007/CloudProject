@@ -1,0 +1,5 @@
+VPC_ID=vpc-396faa42
+SUBNET1=subnet-9b4f06a4
+SUBNET2=subnet-39327b06
+IG_ID=[]
+ROUTE_TABLE_ID=[]

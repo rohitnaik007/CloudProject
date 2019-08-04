@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Cloud Application</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<form th:action="@{/registration}" method="get">
+    <button class="btn btn-md btn-warning btn-block" type="Submit">Go To Registration Page</button>
+</form>
+
+<form th:action="@{/login}" method="get">
+    <button class="btn btn-md btn-danger btn-block" name="viewall"
+            type="Submit">Go Back</button>
+</form>
+
+<br/>
+<div class="container">
+    <form th:action="@{/forgotpass}" method="POST" class="form-signin">
+        <h3 class="form-signin-heading">Please check your mailbox for reset link.</h3>
+        </form>
+</div>
+</body>
+</html>

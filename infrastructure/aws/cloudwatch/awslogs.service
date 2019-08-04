@@ -1,0 +1,7 @@
+[general] > /tmp/awslogs.conf
+state_file= /var/awslogs/agent-state >> /tmp/awslogs.conf
+[logstream1] >> /tmp/awslogs.conf
+file = /var/log/tomcat8/csye6225-aws.log >> /tmp/awslogs.conf
+log_group_name = csye6225-webapp >> /tmp/awslogs.conf
+log_stream_name = csye6225-webapp >> /tmp/awslogs.conf
+datetime_format = %d/%b/%Y:%H:%M:%S >> /tmp/awslogs.conf
